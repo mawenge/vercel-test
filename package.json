@@ -1,0 +1,13 @@
+{
+  "name": "vercel-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Small test repo for the Vercel eve software factory POC.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
