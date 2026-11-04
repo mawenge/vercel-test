@@ -16,6 +16,13 @@ test("average of several numbers", () => {
   assert.equal(average([2, 4, 6]), 4);
 });
 
+test("average rejects an empty array", () => {
+  assert.throws(
+    () => average([]),
+    new RangeError("numbers must not be empty"),
+  );
+});
+
 test("slugify lowercases and joins words with hyphens", () => {
   assert.equal(slugify("Hello World"), "hello-world");
 });

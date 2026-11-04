@@ -20,6 +20,9 @@ export function clamp(value, min, max) {
  * @returns {number} The arithmetic mean of the numbers.
  */
 export function average(numbers) {
+  if (numbers.length === 0) {
+    throw new RangeError("numbers must not be empty");
+  }
   const total = numbers.reduce((sum, n) => sum + n, 0);
   return total / numbers.length;
 }
