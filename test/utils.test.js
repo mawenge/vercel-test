@@ -19,3 +19,11 @@ test("average of several numbers", () => {
 test("slugify lowercases and joins words with hyphens", () => {
   assert.equal(slugify("Hello World"), "hello-world");
 });
+
+test("slugify drops trailing punctuation instead of leaving a hyphen", () => {
+  assert.equal(slugify("Hello, World!"), "hello-world");
+});
+
+test("slugify drops leading whitespace instead of leaving a hyphen", () => {
+  assert.equal(slugify("  Hi"), "hi");
+});
